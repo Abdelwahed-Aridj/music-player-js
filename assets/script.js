@@ -23,8 +23,8 @@ loadSong(songs[songIndex]);
 // Update song details
 function loadSong(song) {
   title.innerText = song;
-  audio.src = `music/${song}.mp3`;
-  cover.src = `images/${song}.jpg`;
+  audio.src = `/assets/music/${song}.mp3`;
+  cover.src = `/assets/images/${song}.jpg`;
 }
 
 // Play song
@@ -169,3 +169,10 @@ audio.addEventListener("ended", nextSong);
 
 // Time of song
 audio.addEventListener("timeupdate", DurTime);
+
+
+//particlesJS.load(@dom-id, @path-json, @callback (optional));
+particlesJS.load('particles-js', '/assets/particles.js', function() {
+  console.log('callback - particles.js config loaded');
+});
+
